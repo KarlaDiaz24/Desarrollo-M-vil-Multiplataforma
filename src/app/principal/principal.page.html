@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;">Hotel de insectos</ion-title>
+  </ion-toolbar>
+   <!--  <ion-segment [scrollable]="true" value="heart" style="background-color: white;">
+      <ion-segment-button value="home">
+        <ion-icon name="home"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="heart">
+        <ion-icon name="heart"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="person">
+        <ion-icon name="person"></ion-icon>
+      </ion-segment-button>
+    </ion-segment> -->
+</ion-header>
+
+<ion-content class="ion-padding" >
+  <p style="margin-top: 5px
+  ; text-align: justify;">Estado actual del hotel de insectos.</p>
+  <ion-list style="text-align: center;">
+    <ion-button [routerLink]="['/movimiento']" color="tertiary" style="margin-top: 30px
+    ;">Movimiento</ion-button
+    ><br>
+    <ion-button [routerLink]="['/temperatura']" color="secondary"
+          >Temperatura</ion-button
+        >
+  </ion-list>
+</ion-content>
+
+<ion-content>
+<ion-tabs>
+  <ion-router-outlet></ion-router-outlet>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button [routerLink]="['/principal']" tab="home">
+      <ion-icon name="home"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="heart">
+      <ion-icon name="heart"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button [routerLink]="['/perfil']" tab="person">
+      <ion-icon name="person"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+</ion-content>
+

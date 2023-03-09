@@ -10,7 +10,9 @@ import { RealtimeDatabaseService } from '../services/realtime-database.service';
 })
 export class MovimientoPage implements OnInit{
 
+  data1: any;
   data: any;
+  data2: any;
 
   constructor(private dataService: RealtimeDatabaseService) { }
 
@@ -19,6 +21,14 @@ export class MovimientoPage implements OnInit{
       this.data = data;
       console.log(this.data)
     });
+    this.dataService.leerDatos('/planta_baja/temperatura').subscribe((data1) => {
+      this.data1 = data1;
+    });
+   /*  firebase.database().ref('/planta_baja/movimiento').on('value', snapshot => {
+      this.data2 = snapshot.val();
+    }); */
+    this.dataService.leerDatos('/planta_baja/movimiento').subscribe((data2) => {
+      this.data2 = data2;
+    });
   }
-
 }

@@ -6,6 +6,37 @@
     <ion-title>Log In</ion-title>
   </ion-toolbar>
 </ion-header>
+
+<ion-content class="padding">
+  <ion-item>
+    <ion-label required>
+      Email
+      <ion-input type="text" [(ngModel)]="user.email" required></ion-input>
+    </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label required>
+      Password
+      <ion-input type="password" [(ngModel)]="user.password" required></ion-input>
+    </ion-label>
+  </ion-item>
+
+    <ion-row>
+      <ion-col>
+    <ion-button [routerLink]="['/principal']" expand="block" color="tertiary">Iniciar sesión</ion-button>
+      </ion-col>
+    </ion-row>
+</ion-content>
+
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Log In</ion-title>
+  </ion-toolbar>
+</ion-header>
 <ion-content>
   <form>
     <ion-item lines="full">
@@ -19,8 +50,9 @@
     <ion-row>
       <ion-col>
         <!-- <ion-button type="submit" color="success" expand="block">Sign In</ion-button> -->
-        <ion-button [routerLink]="['/principal']" expand="block" color="tertiary">Sign In</ion-button>
+    <!--   <ion-button [routerLink]="['/principal']" expand="block" color="tertiary">Sign In</ion-button>
       </ion-col>
     </ion-row>
   </form>
-</ion-content>
+</ion-content> -->
+-->

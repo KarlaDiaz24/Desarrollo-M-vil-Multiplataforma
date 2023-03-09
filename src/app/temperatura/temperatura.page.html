@@ -3,22 +3,48 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
-    <ion-title>Temperatura</ion-title>
+    <ion-title>Clima en el hotel</ion-title>
   </ion-toolbar>
 </ion-header>
 
- <!-- Firebase -->
- <ion-content [fullscreen]="true" style="--border-width: 0px;">
-  <p style="text-align: center;">Temperatura</p>
-  <ion-list>
-    <ion-item *ngIf="data">
-      {{ "Nombre" }}: {{ data.nombre }}<br>
-      {{ "Temperatura" }}: {{ data.temperatura }}
-    </ion-item>
-  </ion-list>
-</ion-content>
+<ion-content style="text-align: center;">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-item *ngIf="data" lines="none">
+            {{ "Temperatura" }}
+            <div
+              class="pie"
+              [ngStyle]="{'--p': data1}"
+              style="--p: 50; --b: 10px; --c: purple"
+            >
+              {{ data.temperatura }}°c
+            </div>
+          </ion-item>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-item *ngIf="data" lines="none">
 
-<ion-content>
+            <div
+              class="pie"
+              [ngStyle]="{'--p': data3}"
+              style="--p: 50; --b: 10px; --c: blue"
+            >
+              {{ data.humedad }}%
+            </div>
+            {{ "Humedad"}}
+          </ion-item>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid> 
+  <p>Prender o apagar la bombilla</p>
+
+  <ion-toggle (click)="handleToggleClick()" [checked]="toggleValue" style="justify-content: center; margin: 40px;"></ion-toggle>
+
   <ion-tabs>
     <ion-router-outlet></ion-router-outlet>
 
@@ -26,12 +52,12 @@
       <ion-tab-button [routerLink]="['/principal']" tab="home">
         <ion-icon name="home"></ion-icon>
       </ion-tab-button>
-      <ion-tab-button tab="heart">
+      <!-- <ion-tab-button tab="heart">
         <ion-icon name="heart"></ion-icon>
-      </ion-tab-button>
+      </ion-tab-button> -->
       <ion-tab-button [routerLink]="['/perfil']" tab="person">
         <ion-icon name="person"></ion-icon>
       </ion-tab-button>
     </ion-tab-bar>
   </ion-tabs>
-  </ion-content>
+</ion-content>

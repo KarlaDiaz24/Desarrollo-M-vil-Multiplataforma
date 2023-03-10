@@ -14,6 +14,8 @@ export class MovimientoPage implements OnInit{
   data: any;
   data2: any;
 
+  movimiento = false;
+
   constructor(private dataService: RealtimeDatabaseService) { }
 
   ngOnInit() {
@@ -29,6 +31,11 @@ export class MovimientoPage implements OnInit{
     }); */
     this.dataService.leerDatos('/planta_baja/movimiento').subscribe((data2) => {
       this.data2 = data2;
+      if(this.data2 == false){
+        this.movimiento = false;
+      }else if(this.data2 == true){
+        this.movimiento = true;
+      }
     });
   }
 }

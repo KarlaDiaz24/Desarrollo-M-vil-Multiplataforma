@@ -8,7 +8,8 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" style="--border-width: 0px; align-items: center; text-align: center;">
-<ion-card *ngIf="data" color="tertiary" style=" margin: 25px;">
+
+<ion-card *ngIf="data" color="tertiary" style=" margin: 25px;" [ngClass]="{'movimiento-activo': movimiento, 'movimiento-inactivo': !movimiento}">
   <ion-card-header>
     <ion-card-title>{{ "Movimiento" }}:</ion-card-title><br>
   {{ data.movimiento ? 'Hay movimiento, revisar el hotel.' : 'No hay movimiento en el hotel.' }}

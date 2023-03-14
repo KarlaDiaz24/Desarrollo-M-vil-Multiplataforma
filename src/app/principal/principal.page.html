@@ -1,34 +1,32 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title style="text-align: center;">Hotel de insectos</ion-title>
+    <ion-title>Hotel de insectos</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="ion-padding">
-  <p style="margin-top: 25px
-  ; text-align: justify;">En este apartado puede ver el clima y movimiento que hay en el hotel de insectos en tiempo real.</p>
-  <ion-list style="text-align: center;">
-    <ion-button [routerLink]="['/movimiento']" color="danger" style="margin-left: 30px;
-    margin-right: 30px;">Movimiento<ion-icon name="walk-outline"></ion-icon></ion-button
-    ><br>
-    <ion-button [routerLink]="['/temperatura']" color="tertiary" style="  margin-left: 30px;
-    margin-right: 30px;"
-          >Clima<ion-icon name="thermometer-outline"></ion-icon></ion-button
-        >
-  </ion-list>
-</ion-content>
+<ion-content class="ion-padding">
+  <ion-row>
+  <!-- Card de bienvenida -->
 
-<ion-content>
-<ion-tabs>
-  <ion-router-outlet></ion-router-outlet>
+  <!-- Elementos img -->
+  <ion-item>
+    <ion-img class="imagen-grande" src="../../assets/icon/movimiento.png" [routerLink]="[ '/movimiento' ]"></ion-img>
+  </ion-item>
+<p></p>
+  <ion-item>
+    <ion-img class="imagen-grande" src="../../assets/icon/temperatura.png" [routerLink]="[ '/temperatura' ]"></ion-img>
+  </ion-item>
 
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button [routerLink]="['/principal']" tab="home">
-      <ion-icon name="home"></ion-icon>
-    </ion-tab-button>
-    <ion-tab-button [routerLink]="['/perfil']" tab="person">
-      <ion-icon name="person"></ion-icon>
-    </ion-tab-button>
-  </ion-tab-bar>
-</ion-tabs>
+
+  <!-- Tabs -->
+  <ion-tabs>
+    <ion-router-outlet></ion-router-outlet>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button [routerLink]="['/principal']" tab="home">
+        <ion-icon name="home"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+
+</ion-row>
 </ion-content>

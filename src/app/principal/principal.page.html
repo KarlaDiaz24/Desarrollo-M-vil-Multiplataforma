@@ -1,32 +1,24 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Hotel de insectos</ion-title>
+  <ion-toolbar style="text-align: center;">
+    <h2>Hotel de insectos</h2>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
-  <ion-row>
-  <!-- Card de bienvenida -->
-
-  <!-- Elementos img -->
-  <ion-item>
-    <ion-img class="imagen-grande" src="../../assets/icon/movimiento.png" [routerLink]="[ '/movimiento' ]"></ion-img>
-  </ion-item>
-<p></p>
-  <ion-item>
-    <ion-img class="imagen-grande" src="../../assets/icon/temperatura.png" [routerLink]="[ '/temperatura' ]"></ion-img>
-  </ion-item>
-
-
-  <!-- Tabs -->
-  <ion-tabs>
-    <ion-router-outlet></ion-router-outlet>
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button [routerLink]="['/principal']" tab="home">
-        <ion-icon name="home"></ion-icon>
-      </ion-tab-button>
-    </ion-tab-bar>
-  </ion-tabs>
-
-</ion-row>
+<ion-content>
+  <ion-card>
+    <img src="../../assets/icon/movimiento.png" />
+    <ion-button [routerLink]="['/movimiento']" class="botonl" expand="block" color="tertiary" style="margin-top: 10px
+    ;">Movimiento</ion-button>
+    <ion-card-content style="font-family:Verdana, Geneva, Tahoma, sans-serif; color: white;">
+     <h2> Entre para ver si hay movimiento cerca del hotel.</h2>
+    </ion-card-content></ion-card>
+    <ion-card>
+    <img src="../../assets/icon/temperatura.png" />
+    <ion-button [routerLink]="['/temperatura']" class="botonl" expand="block" color="tertiary" style="margin-top: 10px
+    ;">Temperatura</ion-button>
+    <ion-card-content style="font-family:Verdana, Geneva, Tahoma, sans-serif; color: white;">
+    <h2>  Entre para ver si la temperatura y humedad esta estable en la habitación. </h2>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
+

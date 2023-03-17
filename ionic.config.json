@@ -1,5 +1,8 @@
 {
   "name": "xdxd",
-  "integrations": {},
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
   "type": "angular"
 }

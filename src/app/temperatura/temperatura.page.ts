@@ -58,7 +58,7 @@ constructor(private dataService: RealtimeDatabaseService, private alertControlle
       this.dataService.activar_foco(ruta, datos);
     }
   }
-  async presentAlert() {
+/*   async presentAlert() {
     const alert = await this.alertController.create({
       header: 'Alerta',
       message: this.currentAlertMessage,
@@ -68,8 +68,24 @@ constructor(private dataService: RealtimeDatabaseService, private alertControlle
     alert.onDidDismiss().then(() => {
       this.currentAlertMessage = 'Esta apagando la bombilla';
       alert.message = this.currentAlertMessage;
-
     });
-  }
+  }/*
   currentAlertMessage: string = 'Esta prendiendo la bombilla';
+}*/
+async presentAlert() {
+  let header, message;
+  if (this.toggleValue) {
+    header = 'Alerta';
+    message  = 'La temperatura es inestable, no puede apagar la bombilla';
+  } else {
+    header = 'Alerta';
+    message = 'La temperatura es estale, no puede prender la bombilla';
+  }
+  const alert = await this.alertController.create({
+    header,
+    message,
+    buttons: ['OK']
+  });
+  await alert.present();
+}
 }

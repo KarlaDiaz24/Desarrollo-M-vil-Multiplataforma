@@ -1,3 +1,12 @@
 export const environment = {
-  production: true
+  production: true,
+    firebaseConfig: {
+    apiKey: "AIzaSyDA2n88zmKHenAvvOea4fl53Ha5CLOHxq4",
+    authDomain: "hotel-de-diaz-sm52.firebaseapp.com",
+    databaseURL: "https://hotel-de-diaz-sm52-default-rtdb.firebaseio.com",
+    projectId: "hotel-de-diaz-sm52",
+    storageBucket: "hotel-de-diaz-sm52.appspot.com",
+    messagingSenderId: "496732230310",
+    appId: "1:496732230310:web:0b92ad5353eb4d79825a67"
+  }
 };

@@ -8,24 +8,13 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" style="--border-width: 0px; align-items: center; text-align: center;">
-
-<ion-card *ngIf="data" color="tertiary" style=" margin: 25px;" [ngClass]="{'movimiento-activo': movimiento, 'movimiento-inactivo': !movimiento}">
+<ion-card *ngIf="data" color="primary" style="margin: 25px; border-radius: 1rem; margin-top: 50%;" [ngClass]="{'movimiento-activo': movimiento, 'movimiento-inactivo': !movimiento}">
   <ion-card-header>
-    <ion-card-title>{{ "Movimiento" }}:</ion-card-title><br>
+  <!--  <ion-card-title>{{ "Movimiento" }}:</ion-card-title><br> -->
+  <ion-card-title>
   {{ data.movimiento ? 'Hay movimiento, revisar el hotel.' : 'No hay movimiento en el hotel.' }}
-</ion-card-header>
+  </ion-card-title>
+  </ion-card-header>
+  <img [src]="movimiento ? '../../assets/icon/conmovimiento.png' : '../../assets/icon/sinmovimiento.png'" alt="Imagen de movimiento">
 </ion-card>
 
-  <ion-tabs>
-    <ion-router-outlet></ion-router-outlet>
-
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button [routerLink]="['/principal']" tab="home">
-        <ion-icon name="home"></ion-icon>
-      </ion-tab-button>
-    <!--   <ion-tab-button [routerLink]="['/perfil']" tab="person">
-        <ion-icon name="person"></ion-icon>
-      </ion-tab-button> -->
-    </ion-tab-bar>
-  </ion-tabs>
-</ion-content>

@@ -5,19 +5,20 @@
 </ion-header>
 
 <ion-content>
-  <ion-card>
-    <img src="../../assets/icon/movimiento.png" />
-    <ion-button [routerLink]="['/movimiento']" class="botonl" expand="block" color="tertiary" style="margin-top: 10px
-    ;">Movimiento</ion-button>
+  <ion-card style="margin-top: 25%;">
+    <img [routerLink]="['/movimiento']" src="../../assets/icon/movimiento.png"/>
+    <!-- <ion-button [routerLink]="['/movimiento']" class="botonl" expand="block" color="tertiary" style="margin-top: 10px
+    ;">Movimiento</ion-button> -->
     <ion-card-content style="font-family:Verdana, Geneva, Tahoma, sans-serif; color: white;">
-     <h2> Entre para ver si hay movimiento cerca del hotel.</h2>
-    </ion-card-content></ion-card>
-    <ion-card>
-    <img src="../../assets/icon/temperatura.png" />
-    <ion-button [routerLink]="['/temperatura']" class="botonl" expand="block" color="tertiary" style="margin-top: 10px
-    ;">Temperatura</ion-button>
+      <h2>Monitoreo del movimiento.</h2>
+    </ion-card-content>
+  </ion-card>
+    <ion-card style="margin-top: 15%;">
+    <img [routerLink]="['/temperatura']" src="../../assets/icon/temperatura.png" />
+    <!-- <ion-button [routerLink]="['/temperatura']" class="botonl" expand="block" color="tertiary" style="margin-top: 10px
+    ;">Temperatura</ion-button> -->
     <ion-card-content style="font-family:Verdana, Geneva, Tahoma, sans-serif; color: white;">
-    <h2>  Entre para ver si la temperatura y humedad esta estable en la habitación. </h2>
+    <h2>Monitoreo de la temperatura y humedad.</h2>
     </ion-card-content>
   </ion-card>
 </ion-content>

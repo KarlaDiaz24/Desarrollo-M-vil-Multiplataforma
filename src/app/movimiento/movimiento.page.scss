@@ -4,10 +4,10 @@ ion-card-header.ios {
 }
 
 .movimiento-activo{
-  background-color: #fd0b0b;
+  background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0.685) 50%,rgb(255, 0, 0));
 }
 .movimiento-inactivo{
-  background-color: rgb(37, 119, 241);
+background-image: linear-gradient(to bottom, rgba(0,255,163,0.535) 50%, rgba(71,60,194,0.56));
 }
 /* ion-content::part(background) {
   background: linear-gradient(to bottom,#386dbd,#009ddd,#05d3f8);

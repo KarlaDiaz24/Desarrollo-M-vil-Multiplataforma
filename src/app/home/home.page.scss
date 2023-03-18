@@ -32,7 +32,8 @@
      background: linear-gradient(to bottom right, #ffffff, #f6ffdc, #cefff4);
 }*/
 ion-content::part(background) {
-  background: linear-gradient(to bottom,#386dbd,#009ddd,#05d3f8);
+ /*  background: linear-gradient(to bottom,#386dbd,#009ddd,#05d3f8); */
+ background-image: linear-gradient(to bottom, rgba(71,60,194,0.56), rgba(0,255,163,0.535));
 }
 
 

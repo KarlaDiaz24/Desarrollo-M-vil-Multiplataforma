@@ -16,9 +16,9 @@
   position: absolute;
   border-radius: 50%;
   inset: 0;
-  background: conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
+  background: conic-gradient(var(--c) calc(var(--p)*1%),#ffffff00 0);
   -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
-          mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+          mask:radial-gradient(farthest-side,#ffffff00 calc(99% - var(--b)),#000 calc(100% - var(--b)));
 }
 ion-toggle {
   height: 10px;
